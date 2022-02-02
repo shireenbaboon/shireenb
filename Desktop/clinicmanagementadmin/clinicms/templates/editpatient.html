@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="POST" class="post-form" action="/managements/updatenurse/{{nurses.id}}">{% csrf_token %}
+        {% csrf_token %}
+    <div class="container">
+<br>
+        <h3>Update Nurse Details</h3>
+
+  </div>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Nurse Id:</label>
+    <div class="col-sm-4">
+        <input type="text" name="id" id="id_id" required maxlength="20" value="{{ nurses.id }}"/>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Nurse Name:</label>
+    <div class="col-sm-4">
+        <input type="text" name="name" id="id_name" required maxlength="100" value="{{ nurses.name }}" />
+    </div>
+  </div>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Age:</label>
+    <div class="col-sm-4">
+        <input type="text" name="age" id="id_age" required maxlength="254" value="{{ nurses.age }}" />
+    </div>
+  </div>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Gender</label>
+    <div class="col-sm-4">
+        <select name="gender" id="gender-select">
+    <option value="">--Please choose an option--</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    <option value="Other">Other</option>
+</select>
+    </div>
+  </div>
+        <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Address:</label>
+    <div class="col-sm-4">
+        <input type="text" name="address" id="id_address" required maxlength="15" value="{{ nurses.address }}" />
+    </div>
+  </div>
+        <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Phone</label>
+    <div class="col-sm-4">
+        <input type="text"  name="phone" id="id_phone" required maxlength="25" value="{{ nurses.phone}}" />
+    </div>
+  </div>
+        <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Assigned Doctor:</label>
+    <div class="col-sm-4">
+        <input type="text"  name="assigned_doctor" id="id_assigned_doctor" required maxlength="25" value="{{ nurses.assigned_doctor }}" />
+    </div>
+
+  </div>
+    <div class="form-group row">
+    <label class="col-sm-1 col-form-label"></label>
+    <div class="col-sm-4">
+    <button type="submit" class="btn btn-success">Update</button>
+    </div>
+  </div>
+    </div>
+</form>
+
+{% endblock content %}

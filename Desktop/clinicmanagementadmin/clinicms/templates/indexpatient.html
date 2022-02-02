@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Add New Nurse</h1>
+    <form method="POST" class="post-form" action="/managements/empnurse">{% csrf_token %}
+            {% csrf_token %}
+        <div class="container">
+    <br>
+        <div class="form-group row">
+        <label class="col-sm-1 col-form-label"></label>
+        <div class="col-sm-4">
+        <h4>Enter Nurse details</h4>
+        </div>
+      </div>
+
+        <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Nurse name:</label>
+        <div class="col-sm-4">
+          {{ form.name }}
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Age:</label>
+        <div class="col-sm-4">
+          {{ form.age }}
+        </div>
+      </div>
+        <div class="form-group row">
+        <label class="col-sm-2 col-form-label">gender:</label>
+        <div class="col-sm-4">
+          {{ form.gender }}
+        </div>
+      </div>
+        <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Assigned Doctor:</label>
+        <div class="col-sm-4">
+          {{ form.assigned_doctor}}
+        </div>
+      </div>
+       <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Address:</label>
+        <div class="col-sm-4">
+          {{ form.address}}
+        </div>
+      </div>
+                 <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Email:</label>
+        <div class="col-sm-4">
+          {{ form.email }}
+        </div>
+      </div>
+            <div class="form-group row">
+        <label class="col-sm-2 col-form-label">phone:</label>
+        <div class="col-sm-4">
+          {{ form.phone }}
+        </div>
+      </div>
+
+        <div class="form-group row">
+        <label class="col-sm-1 col-form-label"></label>
+        <div class="col-sm-4">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+        </div>
+    </form>
+{% endblock content %}

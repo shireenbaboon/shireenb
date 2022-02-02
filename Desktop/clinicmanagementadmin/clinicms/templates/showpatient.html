@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+
+{% block content %}
+    <h1>Nurse Details</h1>
+
+<table class="table table-striped table-bordered table-sm">
+    <thead class="thead-dark">
+    <tr>
+        <th>Nurse Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Address</th>
+        <th>Assigned Doctor</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+{% for nurse in nurses %}
+    <tr>
+        <td>{{ nurse.name }}</td>
+        <td>{{ nurse.age }}</td>
+        <td>{{ nurse.gender }}</td>
+        <td>{{ nurse.address }}</td>
+        <td>{{ nurse.assigned_doctor }}</td>
+        <td>{{ nurse.email }}</td>
+        <td>{{ nurse.phone }}</td>
+        <td>
+            <a href="/managements/editnurse/{{ nurse.id }}"><span class="glyphicon glyphicon-pencil" >Edit</span></a>
+            <a href="/managements/deletenurse/{{ nurse.id }}">Delete</a>
+        </td>
+    </tr>
+{% endfor %}
+    </tbody>
+</table>
+<br>
+<br>
+    <center><a href="/managements/empnurse" class="btn btn-primary">Add New Record</a>
+      <a href="/" class="btn btn-primary">Back to Home</a></center>
+
+
+{% endblock content %}
