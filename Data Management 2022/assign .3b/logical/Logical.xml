@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="3036E294-E867-4126-CC52-569EDBADC0CB" mainViewID="5E1963DF-48D3-36D4-7E9E-E3212FF75BAD">
+<createdBy>shireenb</createdBy>
+<createdTime>2022-06-20 21:18:23 UTC</createdTime>
+<ownerDesignName>assign .3b</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

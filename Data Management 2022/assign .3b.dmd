@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="assign .3b" id="EC1C1A0B-B965-1C79-F05E-23137C077B37" version="3.5">
+<createdBy>shireenb</createdBy>
+<createdTime>2022-06-20 21:18:23 UTC</createdTime>
+<ownerDesignName>assign .3b</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>EC1C1A0B-B965-1C79-F05E-23137C077B37</designId>
+</OSDM_Design>
